@@ -1,4 +1,18 @@
+@import './../../styles/vars.scss';
+
 .header {
-  background: #eee;
-  padding: 48px;
+  padding: 0 $scale-2-1;
+  margin-bottom: $scale-2-1;
+  background: white;
+}
+
+.nav {
+  list-style: none;
+
+  li {
+    padding: $scale-2-1 $scale;
+    display: inline-block;
+
+    &:first-child { padding-left: 0; }
+  }
 }

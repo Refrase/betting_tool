@@ -5,7 +5,10 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <h1>Header</h1>
+        <ul className="nav">
+          <li>Punkt 1</li>
+          <li>Punkt 2</li>
+        </ul>
       </div>
     )
   }

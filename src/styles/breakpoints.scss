@@ -1,0 +1,21 @@
+@mixin breakpoint($class, $value: false, $min: false) {
+
+  @if $class == 'btwMobileTablet' {
+    @media (min-width: 480px) { @content; }
+  } @else if $class == 'btwTabletDesktop' {
+    @media (min-width: 840px) { @content; }
+  } @else if $class == 'btwDesktopWidescreen' {
+    @media (min-width: 1200px) { @content; }
+  } @else if $class == 'btwWidescreenExtrawidescreen' {
+    @media (min-width: 1600px) { @content; }
+  } @else if $class == 'custom' {
+    @if $min == true {
+      @media (min-width: $value) { @content; }
+    } @else {
+      @media (max-width: $value) { @content; }
+    }
+  } @else {
+    @error 'That breakpoint isn\'t available...';
+  }
+
+}

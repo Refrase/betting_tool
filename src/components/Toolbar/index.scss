@@ -1,0 +1,9 @@
+@import './../../styles/vars.scss';
+@import './../../styles/breakpoints.scss';
+
+.toolbar {
+  grid-column: 1 / 2;
+  grid-row: 1 / last-line;
+  background: white;
+  padding: $scale-2-1;
+}
