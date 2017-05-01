@@ -1,23 +1,25 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css'
 
 // Components
+import GridBlock from './../GridBlock'
 import Header from './../Header'
-import Toolbar from './../Toolbar'
+
+// Pages (routes)
+import Dashboard from './../../pages/dashboard'
+import Coupon from './../../pages/coupon'
 
 class App extends Component {
   render() {
     return (
-      <div className="app">
-        <Header />
-        <div className="container">
-          <Toolbar />
-          <div className="content">
-            <p>Indhold...</p>
-          </div>
-          { this.props.children }
+      <Router>
+        <div className="app">
+          <Header />
+          <Route exact path="/" component={ Dashboard } />
+          <Route path="/coupon" component={ Coupon } />
         </div>
-      </div>
+      </Router>
     );
   }
 }

@@ -1,35 +1,6 @@
 @import './../../styles/vars.scss';
-@import './../../styles/breakpoints.scss';
 
 .app {
   background: $color-smoke;
   min-height: 100vh;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: $scale;
-  grid-row-gap: $scale;
-  width: 100%;
-
-  @include breakpoint( 'btwTabletDesktop' ) {
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: $scale-2-1;
-    grid-row-gap: $scale-2-1;
-    width: $contentWidth-fromBtwTabletDesktop;
-    margin: 0 auto;
-  }
-
-  @include breakpoint( 'btwDesktopWidescreen' ) {
-    width: $contentWidth-fromBtwDesktopWidescreen;
-  }
-}
-
-.content {
-  grid-column: 2 / last-line;
-  grid-row: 1 / last-line;
-  background: white;
-  padding: $scale-2-1;
 }

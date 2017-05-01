@@ -1,0 +1,18 @@
+@import './../../styles/vars.scss';
+@import './../../styles/breakpoints.scss';
+
+.nav {
+  display: flex;
+  width: 100%;
+  padding: 0 $scale-2-1;
+  @include breakpoint( 'btwTabletDesktop' ) { width: $contentWidth-fromBtwTabletDesktop; margin: 0 auto; }
+  @include breakpoint( 'btwDesktopWidescreen' ) { width: $contentWidth-fromBtwDesktopWidescreen; }
+
+  a {
+    padding: $scale $scale-2-1;
+    text-decoration: none;
+    border-left: 1px solid $color-smoke;
+    transition: background-color 200ms ease-out;
+    &:hover { background-color: $color-smoke; }
+  }
+}

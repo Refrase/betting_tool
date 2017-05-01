@@ -1,0 +1,21 @@
+@import './../../styles/vars.scss';
+@import './../../styles/breakpoints.scss';
+
+.gridBlock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: $scale;
+  width: 100%;
+  padding: 0 $scale-2-1;
+
+  @include breakpoint( 'btwTabletDesktop' ) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: $scale-2-1;
+    width: $contentWidth-fromBtwTabletDesktop;
+    margin: 0 auto;
+  }
+
+  @include breakpoint( 'btwDesktopWidescreen' ) {
+    width: $contentWidth-fromBtwDesktopWidescreen;
+  }
+}
