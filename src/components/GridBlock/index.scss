@@ -10,7 +10,6 @@
 
   @include breakpoint( 'btwTabletDesktop' ) {
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: $scale-2-1;
     width: $contentWidth-fromBtwTabletDesktop;
     margin: 0 auto;
   }

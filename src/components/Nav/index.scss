@@ -3,18 +3,18 @@
 
 .nav {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
   padding: 0 $scale-2-1;
   @include breakpoint( 'btwTabletDesktop' ) { width: $contentWidth-fromBtwTabletDesktop; margin: 0 auto; }
   @include breakpoint( 'btwDesktopWidescreen' ) { width: $contentWidth-fromBtwDesktopWidescreen; }
 
+  h1 { color: white; }
+
   a {
-    padding: $scale $scale-2-1;
     text-decoration: none;
-    border-left: 1px solid $color-primary-lighter-2;
     color: white;
-    transition: background-color 200ms ease-out;
-    &:last-child { border-right: 1px solid $color-primary-lighter-2; }
-    &:hover { background-color: $color-primary-lighter-2; }
+    margin-left: $scale-2-1;
   }
 }

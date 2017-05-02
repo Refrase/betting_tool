@@ -1,6 +1,8 @@
 @import './../../styles/vars.scss';
 
 .header {
+  display: flex;
+  align-items: flex-end;
+  height: 120px;
   margin-bottom: $scale-2-1;
-  background-color: $color-primary-lighter-3;
 }

@@ -6,8 +6,11 @@ class Nav extends Component {
   render() {
     return (
       <div className="nav">
-        <Link to="/">Dashboard</Link>
-        <Link to="/coupon">Coupon</Link>
+        <h1>Betting dashboard</h1>
+        <div className="navLinks">
+          <Link to="/">Dashboard</Link>
+          <Link to="/coupon">Coupon</Link>
+        </div>
       </div>
     )
   }
