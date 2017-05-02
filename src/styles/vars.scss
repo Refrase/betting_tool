@@ -20,23 +20,70 @@ $scale-1-8: $scale / 8;
 
 /* ----- Colors ----- */
 
-// ----- Primary
-$color-primary: #20A4F3;
+// ----- Green
+$color-green: #51D845;
 
-$color-primary-lighter-6: mix(white, $color-primary, 98% );
-$color-primary-lighter-5: mix(white, $color-primary, 88% );
-$color-primary-lighter-4: mix(white, $color-primary, 70% );
-$color-primary-lighter-3: mix(white, $color-primary, 50% );
-$color-primary-lighter-2: mix(white, $color-primary, 30% );
-$color-primary-lighter-1: mix(white, $color-primary, 15% );
+$color-green-lighter-6: mix(white, $color-green, 98% );
+$color-green-lighter-5: mix(white, $color-green, 88% );
+$color-green-lighter-4: mix(white, $color-green, 70% );
+$color-green-lighter-3: mix(white, $color-green, 50% );
+$color-green-lighter-2: mix(white, $color-green, 30% );
+$color-green-lighter-1: mix(white, $color-green, 15% );
 
-$color-primary-darker-1: mix(black, $color-primary, 11% );
-$color-primary-darker-2: mix(black, $color-primary, 28% );
-$color-primary-darker-3: mix(black, $color-primary, 43% );
-$color-primary-darker-4: mix(black, $color-primary, 59% );
+$color-green-darker-1: mix(black, $color-green, 11% );
+$color-green-darker-2: mix(black, $color-green, 28% );
+$color-green-darker-3: mix(black, $color-green, 43% );
+$color-green-darker-4: mix(black, $color-green, 59% );
+
+// ----- Yellow
+$color-yellow: #ECFFA3;
+
+$color-yellow-lighter-6: mix(white, $color-yellow, 98% );
+$color-yellow-lighter-5: mix(white, $color-yellow, 88% );
+$color-yellow-lighter-4: mix(white, $color-yellow, 70% );
+$color-yellow-lighter-3: mix(white, $color-yellow, 50% );
+$color-yellow-lighter-2: mix(white, $color-yellow, 30% );
+$color-yellow-lighter-1: mix(white, $color-yellow, 15% );
+
+$color-yellow-darker-1: mix(black, $color-yellow, 11% );
+$color-yellow-darker-2: mix(black, $color-yellow, 28% );
+$color-yellow-darker-3: mix(black, $color-yellow, 43% );
+$color-yellow-darker-4: mix(black, $color-yellow, 59% );
+
+// ----- Blue
+$color-blue: #426DDE;
+
+$color-blue-lighter-6: mix(white, $color-blue, 98% );
+$color-blue-lighter-5: mix(white, $color-blue, 88% );
+$color-blue-lighter-4: mix(white, $color-blue, 70% );
+$color-blue-lighter-3: mix(white, $color-blue, 50% );
+$color-blue-lighter-2: mix(white, $color-blue, 30% );
+$color-blue-lighter-1: mix(white, $color-blue, 15% );
+
+$color-blue-darker-1: mix(black, $color-blue, 11% );
+$color-blue-darker-2: mix(black, $color-blue, 28% );
+$color-blue-darker-3: mix(black, $color-blue, 43% );
+$color-blue-darker-4: mix(black, $color-blue, 59% );
+
+// ----- Red
+$color-red: #EE5950;
+
+$color-red-lighter-8: mix(white, $color-red, 98% );
+$color-red-lighter-7: mix(white, $color-red, 94% );
+$color-red-lighter-6: mix(white, $color-red, 88% );
+$color-red-lighter-5: mix(white, $color-red, 80% );
+$color-red-lighter-4: mix(white, $color-red, 70% );
+$color-red-lighter-3: mix(white, $color-red, 50% );
+$color-red-lighter-2: mix(white, $color-red, 30% );
+$color-red-lighter-1: mix(white, $color-red, 15% );
+
+$color-red-darker-1: mix(black, $color-red, 11% );
+$color-red-darker-2: mix(black, $color-red, 28% );
+$color-red-darker-3: mix(black, $color-red, 43% );
+$color-red-darker-4: mix(black, $color-red, 59% );
 
 // ----- Base
-$color-base: #011627;
+$color-base: #333333;
 
 $color-base-lighter-8: mix(white, $color-base, 98% );
 $color-base-lighter-7: mix(white, $color-base, 94% );
@@ -53,7 +100,7 @@ $color-base-darker-3: mix(black, $color-base, 43% );
 $color-base-darker-4: mix(black, $color-base, 59% );
 
 // ----- Smoke
-$color-smoke: #F6F7F8;
+$color-smoke: #FFFFFC;
 
 $color-smoke-lighter-8: mix(white, $color-smoke, 98% );
 $color-smoke-lighter-7: mix(white, $color-smoke, 94% );
@@ -68,23 +115,6 @@ $color-smoke-darker-1: mix(black, $color-smoke, 11% );
 $color-smoke-darker-2: mix(black, $color-smoke, 28% );
 $color-smoke-darker-3: mix(black, $color-smoke, 43% );
 $color-smoke-darker-4: mix(black, $color-smoke, 59% );
-
-// ----- Dismiss
-$color-dismiss: #FF3366;
-
-$color-dismiss-lighter-8: mix(white, $color-dismiss, 98% );
-$color-dismiss-lighter-7: mix(white, $color-dismiss, 94% );
-$color-dismiss-lighter-6: mix(white, $color-dismiss, 88% );
-$color-dismiss-lighter-5: mix(white, $color-dismiss, 80% );
-$color-dismiss-lighter-4: mix(white, $color-dismiss, 70% );
-$color-dismiss-lighter-3: mix(white, $color-dismiss, 50% );
-$color-dismiss-lighter-2: mix(white, $color-dismiss, 30% );
-$color-dismiss-lighter-1: mix(white, $color-dismiss, 15% );
-
-$color-dismiss-darker-1: mix(black, $color-dismiss, 11% );
-$color-dismiss-darker-2: mix(black, $color-dismiss, 28% );
-$color-dismiss-darker-3: mix(black, $color-dismiss, 43% );
-$color-dismiss-darker-4: mix(black, $color-dismiss, 59% );
 
 /* ----- Font-family ----- */
 
