@@ -9,7 +9,7 @@ class container extends Component {
   render() {
     return (
       <div className="dashboard">
-        <GridBlock>
+        <GridBlock noGutter>
           <Toolbar />
           <div className="content">
             <p>Indhold...</p>

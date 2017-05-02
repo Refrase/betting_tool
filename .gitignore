@@ -12,6 +12,9 @@
 # source
 /src/**/*.css
 
+# graphics
+/graphics
+
 # misc
 .DS_Store
 .env

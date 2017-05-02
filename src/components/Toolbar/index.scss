@@ -2,7 +2,9 @@
 @import './../../styles/breakpoints.scss';
 
 .toolbar {
-  grid-column: 1 / 2;
-  background: white;
+  grid-column: 1 / last-line;
+  background: $color-primary-lighter-3;
   padding: $scale-2-1;
+  @include breakpoint( 'btwMobileTablet' ) { grid-column: 1 / 2; }
+  & > * { color: white; }
 }

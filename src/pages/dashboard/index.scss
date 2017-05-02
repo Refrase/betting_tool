@@ -1,7 +1,9 @@
-@import './../../../styles/vars.scss';
+@import './../../styles/vars.scss';
+@import './../../styles/breakpoints.scss';
 
 .content {
-  grid-column: 2 / last-line;
-  background: white;
+  grid-column: 1 / last-line;
+  background: $color-primary-lighter-6;
   padding: $scale-2-1;
+  @include breakpoint( 'btwMobileTablet' ) { grid-column: 2 / last-line; }
 }

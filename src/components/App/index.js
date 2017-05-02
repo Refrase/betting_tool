@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css'
 
 // Components
-import GridBlock from './../GridBlock'
 import Header from './../Header'
 
 // Pages (routes)
