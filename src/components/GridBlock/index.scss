@@ -2,21 +2,31 @@
 @import './../../styles/breakpoints.scss';
 
 .gridBlock {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: $scale;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 $scale-2-1;
+  margin: 0 auto;
+  width: 100%;
+  &-noWrap { flex-wrap: nowrap !important; }
+  & > * { padding: 0 $scale; }
 
-  @include breakpoint( 'btwTabletDesktop' ) {
-    grid-template-columns: repeat(5, 1fr);
-    width: $contentWidth-fromBtwTabletDesktop;
-    margin: 0 auto;
-  }
+  // Content-widths
+  @include breakpoint( 'btwMobileTablet' )      { width: $contentWidth-fromBtwMobileTablet; padding: 0 $scale; }
+  @include breakpoint( 'btwTabletDesktop' )     { width: $contentWidth-fromBtwTabletDesktop; }
+  @include breakpoint( 'btwDesktopWidescreen' ) { width: $contentWidth-fromBtwDesktopWidescreen; }}
 
-  @include breakpoint( 'btwDesktopWidescreen' ) {
-    width: $contentWidth-fromBtwDesktopWidescreen;
-  }
+// Grid
+$cols: 2 3 4 5 6 8 12;
+$spans: 0 1 2 3 4 5 6 7 8 9 10 11 12;
+@each $col in $cols {
+  .gridBlock-columns-#{$col} > * { // Set num. columns with columns="X"
+    width: 100%;
+    @include breakpoint( 'btwMobileTablet' ) { width: percentage(1/$col) !important; }} // Default to 100% width on tablet and below
 
-  &.noGutter { grid-column-gap: 0; }
-}
+  @each $span in $spans {
+    .gridBlock-columns-#{$col} > *.span-#{$span} { // Set num. of columns to span for direct children
+      width: 100%;
+      @include breakpoint( 'btwMobileTablet' ) { width: percentage(1/$col * $span) !important; }}
+    .gridBlock-columns-#{$col} > *.offset-#{$span} { // Set num. of columns to offset
+      margin-left: 0;
+      @include breakpoint( 'btwMobileTablet' ) { margin-left: percentage(1/$col * $span) !important; }}}}

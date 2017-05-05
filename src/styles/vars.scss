@@ -138,6 +138,19 @@ $fontSize-xxxsmall: 8px;
 $fontSize-title: $fontSize-xxxlarge;
 $fontSize-copy: $fontSize-base;
 
+/* ----- Border radius ----- */
+
+$borderRadius: 2px;
+
+/* ----- Box shadow ----- */
+
+$boxShadow: 0px 0px $scale-2-1 0px rgba($color-base, 0.15);
+
+/* ----- Gradients ----- */
+
+$linearGradientOverlay-background-darken: linear-gradient( rgba(black, 0), rgba(black, 0.08) );
+$linearGradientOverlay-background-lighten: linear-gradient( rgba(white, 0.16), rgba(white, 0) );
+
 /* ----- Layout ----- */
 
 $contentWidth-tablet: 100%;

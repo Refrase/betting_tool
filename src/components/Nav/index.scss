@@ -6,9 +6,6 @@
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  padding: 0 $scale-2-1;
-  @include breakpoint( 'btwTabletDesktop' ) { width: $contentWidth-fromBtwTabletDesktop; margin: 0 auto; }
-  @include breakpoint( 'btwDesktopWidescreen' ) { width: $contentWidth-fromBtwDesktopWidescreen; }
 
   h1 { color: white; }
 

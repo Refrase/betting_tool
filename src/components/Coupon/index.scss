@@ -1,0 +1,10 @@
+@import './../../styles/vars.scss';
+
+.coupon {
+  background-color: $color-smoke;
+  background-image: $linearGradientOverlay-background-darken;
+  padding: $scale-2-1;
+  box-shadow: $boxShadow;
+  border-radius: $borderRadius;
+  width: 100%;
+}

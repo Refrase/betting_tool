@@ -7,7 +7,7 @@ import Header from './../Header'
 
 // Pages (routes)
 import Dashboard from './../../pages/dashboard'
-import Coupon from './../../pages/coupon'
+import Settings from './../../pages/settings'
 
 class App extends Component {
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
         <div className="app">
           <Header />
           <Route exact path="/" component={ Dashboard } />
-          <Route path="/coupon" component={ Coupon } />
+          <Route path="/settings" component={ Settings } />
         </div>
       </Router>
     );

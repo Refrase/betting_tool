@@ -11,9 +11,9 @@
     repeating-linear-gradient(
       90deg,
       rgba(white, 0),
-      rgba(white, 0) 80px,
-      rgba($color-green-darker-1, 0.25) 80px,
-      rgba($color-green-darker-1, 0.25) 160px /* determines size */
+      rgba(white, 0) 160px,
+      rgba($color-green-darker-1, 0.25) 160px,
+      rgba($color-green-darker-1, 0.25) 320px /* determines size */
     ),
     url('./assets/grain.png');
   min-height: 100vh;

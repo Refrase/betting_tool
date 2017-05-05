@@ -9,7 +9,7 @@ class Nav extends Component {
         <h1>Betting dashboard</h1>
         <div className="navLinks">
           <Link to="/">Dashboard</Link>
-          <Link to="/coupon">Coupon</Link>
+          <Link to="/settings">Settings</Link>
         </div>
       </div>
     )
