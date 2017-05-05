@@ -4,14 +4,28 @@ import './index.css'
 
 class ListItem extends Component {
   render() {
+    const { date, month, person, system, amountPerBet } = this.props;
     return (
       <li className="listItem">
-        <p>List item</p>
+        <div className="listItem_left">
+          <p className="listItem_date">{date}. {month}</p>
+          { person ? ( <p className="listItem_person">Bet placed by {person}</p> ) : null }
+        </div>
+        <div className="listItem_right">
+          { system ? ( <p className="listItem_system">{system.minRights}/{system.total}</p> ) : null }
+          <p className="listItem_amount">{amountPerBet * system.total} kr</p>
+        </div>
       </li>
     )
   }
 }
 
-ListItem.propTypes = {}
+ListItem.propTypes = {
+  date: PropTypes.number.isRequired,
+  month: PropTypes.numberisRequired,
+  person: PropTypes.string,
+  system: PropTypes.object,
+  amountPerBet: PropTypes.number.isRequired
+}
 
 export default ListItem

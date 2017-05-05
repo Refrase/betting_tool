@@ -1,1 +1,37 @@
-.listItem {}
+@import './../../styles/vars.scss';
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  padding: $scale-2-1;
+
+  &:nth-child(even) { background-color: mix($color-yellow, rgba(black, 0.1)); }
+  &:last-child { border-radius: 0 0 $borderRadius $borderRadius; }
+
+  p { color: $color-yellow-darker-4; }
+
+  &_date {
+    font-size: $fontSize-large;
+    font-weight: 600;
+    margin-bottom: $scale-1-2;
+  }
+
+  &_person {
+    font-size: $fontSize-small;
+    color: $color-yellow-darker-2 !important;
+  }
+
+  &_right { display: flex; }
+
+  &_system {
+    font-weight: 200;
+    font-size: $fontSize-xxxlarge;
+    margin-right: $scale;
+    color: $color-yellow-darker-2 !important;
+  }
+
+  &_amount {
+    font-weight: 500;
+    font-size: $fontSize-xxxlarge;
+  }
+}
