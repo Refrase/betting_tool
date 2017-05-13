@@ -3,8 +3,15 @@
 .coupon {
   background-color: $color-smoke;
   background-image: $linearGradientOverlay-background-darken;
-  padding: $scale-2-1;
   box-shadow: $boxShadow;
   border-radius: $borderRadius;
   width: 100%;
+  list-style: none;
+
+  &_footer {
+    padding: $scale-2-1;
+    background: $color-base-lighter-7;
+    text-align: right;
+    border-radius: 0 0 $borderRadius $borderRadius; 
+  }
 }

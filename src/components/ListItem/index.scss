@@ -3,38 +3,38 @@
 .listItem {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: $scale;
 
   &:nth-child(even) { background-color: mix($color-yellow, rgba(black, 0.1)); }
+  &:first-child { border-radius: $borderRadius $borderRadius 0 0; }
   &:last-child { border-radius: 0 0 $borderRadius $borderRadius; }
 
   p { color: $color-yellow-darker-4; }
 
-  &_date {
-    font-size: $fontSize-base;
-    font-weight: 500;
-    margin-bottom: $scale-1-4;
-  }
-
-  &_person {
-    font-size: $fontSize-xsmall;
-    color: $color-yellow-darker-2 !important;
-  }
-
-  &_right {
-    display: flex;
-    align-items: center;
-  }
-
   &_system {
-    font-weight: 200;
+    font-weight: 500;
     font-size: $fontSize-xxlarge;
     margin-right: $scale;
-    color: $color-yellow-darker-2 !important;
   }
 
   &_amount {
-    font-weight: 500;
+    font-weight: 200;
     font-size: $fontSize-xxlarge;
+    margin-right: $scale-3-1;
+  }
+
+  &_date {
+    text-align: right;
+    font-size: $fontSize-small;
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: $color-yellow-darker-3 !important;
+  }
+
+  &_person {
+    text-align: right;
+    font-size: $fontSize-xsmall;
+    color: $color-yellow-darker-2 !important;
   }
 }

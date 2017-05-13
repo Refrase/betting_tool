@@ -1,0 +1,67 @@
+@import './../../styles/vars.scss';
+@import './../../styles/truncate.scss';
+
+.couponItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid $color-base-lighter-7;
+
+  &:first-child { border-radius: $borderRadius $borderRadius 0 0; }
+  &:last-child { border: none; }
+}
+
+input[type="checkbox"] {
+  margin: $scale-2-1;
+  max-width: 10px;
+  flex-basis: 10px;
+}
+
+.matchData {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%; // Keeps other elements at their minimum required width and pushes them respectively left and right
+  padding: $scale-2-1 $scale;
+  border-style: solid;
+  border-color: $color-base-lighter-7;
+  border-width: 0 1px 0 1px;
+
+  > * { float: left; }
+
+  > p:first-child {
+    width: 100px;
+    text-align: right;
+    margin-right: $scale;
+    @include truncate;
+  }
+
+  > p:last-child {
+    width: 100px;
+    margin-left: $scale;
+    @include truncate;
+  }
+}
+
+select {
+  color: $color-base-lighter-4;
+  background: rgba(255,255,255,0);
+  font-weight: 200;
+  margin: 0 $scale-2-1 !important;
+  &:focus { border: 0; outline: 0; }
+}
+
+.betWrap {
+  display: flex;
+  align-items: center;
+  padding: $scale-2-1;
+  padding-top: $scale + 2px;
+  padding-bottom: $scale + 2px;
+  border-left: 1px solid $color-base-lighter-7;
+}
+
+.bet {
+  margin-right: $scale;
+  font-weight: bold;
+  font-size: $fontSize-xxlarge;
+}

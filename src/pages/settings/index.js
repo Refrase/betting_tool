@@ -8,7 +8,7 @@ class container extends Component {
   render() {
     return (
       <div className="settings">
-        <GridBlock>
+        <GridBlock columns={12}>
           <h1>Settings</h1>
         </GridBlock>
       </div>

@@ -7,13 +7,13 @@ class ListItem extends Component {
     const { date, month, person, system, amountPerBet } = this.props;
     return (
       <li className="listItem">
-        <div className="listItem_left">
+        <p>
+          { system ? ( <span className="listItem_system">{system.minRights}/{system.total}</span> ) : null }
+          <span className="listItem_amount">{amountPerBet * system.total} kr</span>
+        </p>
+        <div>
           <p className="listItem_date">{date}. {month}</p>
           { person ? ( <p className="listItem_person">by {person}</p> ) : null }
-        </div>
-        <div className="listItem_right">
-          { system ? ( <p className="listItem_system">{system.minRights}/{system.total}</p> ) : null }
-          <p className="listItem_amount">{amountPerBet * system.total} kr</p>
         </div>
       </li>
     )
@@ -22,7 +22,7 @@ class ListItem extends Component {
 
 ListItem.propTypes = {
   date: PropTypes.number.isRequired,
-  month: PropTypes.numberisRequired,
+  month: PropTypes.string.isRequired,
   person: PropTypes.string,
   system: PropTypes.object,
   amountPerBet: PropTypes.number.isRequired
