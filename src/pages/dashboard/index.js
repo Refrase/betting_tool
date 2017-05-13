@@ -32,6 +32,16 @@ class container extends Component {
         },
         amountPerBet: 10
       },
+      {
+        date: 17,
+        month: 'oktober',
+        person: 'Dennis',
+        system: {
+          minRights: 5,
+          total: 6
+        },
+        amountPerBet: 15
+      },
     ];
   }
 

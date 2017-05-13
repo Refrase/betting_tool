@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 import './index.css'
 
 class Coupon extends Component {
@@ -11,7 +10,5 @@ class Coupon extends Component {
     )
   }
 }
-
-Coupon.propTypes = {}
 
 export default Coupon

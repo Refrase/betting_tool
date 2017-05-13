@@ -3,7 +3,7 @@
 .listItem {
   display: flex;
   justify-content: space-between;
-  padding: $scale-2-1;
+  padding: $scale;
 
   &:nth-child(even) { background-color: mix($color-yellow, rgba(black, 0.1)); }
   &:last-child { border-radius: 0 0 $borderRadius $borderRadius; }
@@ -11,27 +11,30 @@
   p { color: $color-yellow-darker-4; }
 
   &_date {
-    font-size: $fontSize-large;
-    font-weight: 600;
-    margin-bottom: $scale-1-2;
+    font-size: $fontSize-base;
+    font-weight: 500;
+    margin-bottom: $scale-1-4;
   }
 
   &_person {
-    font-size: $fontSize-small;
+    font-size: $fontSize-xsmall;
     color: $color-yellow-darker-2 !important;
   }
 
-  &_right { display: flex; }
+  &_right {
+    display: flex;
+    align-items: center;
+  }
 
   &_system {
     font-weight: 200;
-    font-size: $fontSize-xxxlarge;
+    font-size: $fontSize-xxlarge;
     margin-right: $scale;
     color: $color-yellow-darker-2 !important;
   }
 
   &_amount {
     font-weight: 500;
-    font-size: $fontSize-xxxlarge;
+    font-size: $fontSize-xxlarge;
   }
 }

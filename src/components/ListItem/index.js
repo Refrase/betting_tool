@@ -9,7 +9,7 @@ class ListItem extends Component {
       <li className="listItem">
         <div className="listItem_left">
           <p className="listItem_date">{date}. {month}</p>
-          { person ? ( <p className="listItem_person">Bet placed by {person}</p> ) : null }
+          { person ? ( <p className="listItem_person">by {person}</p> ) : null }
         </div>
         <div className="listItem_right">
           { system ? ( <p className="listItem_system">{system.minRights}/{system.total}</p> ) : null }
