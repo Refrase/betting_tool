@@ -3,20 +3,20 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import './index.css'
 
-class List extends Component {
+class FormAddCoupon extends Component {
   render() {
-    const classes = classnames( 'list', { 'list-flipped': this.props.flip ? true : null });
+    const classes = classnames( 'formAddCoupon', { 'formAddCoupon-flipped': this.props.flip ? true : null });
     return (
-      <ul className={ classes }>
+      <div className={ classes }>
         {this.props.children}
-      </ul>
+      </div>
     )
   }
 }
 
-List.propTypes = {
+FormAddCoupon.propTypes = {
   children: PropTypes.node,
   flip: PropTypes.bool
 }
 
-export default List
+export default FormAddCoupon

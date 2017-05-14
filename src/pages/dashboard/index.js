@@ -5,6 +5,7 @@ import './index.css'
 import GridBlock from './../../components/GridBlock'
 import List from './../../components/List'
 import ListItem from './../../components/ListItem'
+import FormAddCoupon from './../../components/FormAddCoupon'
 import Coupon from './../../components/Coupon'
 import CouponItem from './../../components/CouponItem'
 import Button from './../../components/Button'
@@ -76,23 +77,30 @@ class container extends Component {
         matches: []
       },
     ]
+
+    this.state = {
+      addingCoupon: false
+    }
+  }
+
+  addCoupon() {
+    this.setState({ addingCoupon: !this.state.addingCoupon })
   }
 
   render() {
-    const listLayout = {
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column'
-    }
-    const buttonPositioning = {
-      marginTop: '-24px',
-      marginBottom: '12px'
-    }
+    const flipAreaPerspective = { perspective: 1200, marginBottom: '24px' }
     return (
       <div className="dashboard">
         <GridBlock columns={12}>
-          <div className="span-5" style={ listLayout }>
-            <List>
+          <div className="span-5" style={ flipAreaPerspective }>
+            <FormAddCoupon flip={ this.state.addingCoupon ? true : null }>
+              <p>Form</p>
+              <p>Form</p>
+              <p>Form</p>
+              <p>Form</p>
+              <p>Form</p>
+            </FormAddCoupon>
+            <List flip={ this.state.addingCoupon ? true : null }>
               { this.coupons.map( (coupon, index) =>
                 <ListItem
                   key={ index }
@@ -103,7 +111,6 @@ class container extends Component {
                   amountPerBet={ coupon.amountPerBet } />
               )}
             </List>
-            <Button icon={ plus } style={ buttonPositioning } />
           </div>
           <div className="span-7">
             <Coupon gain={ this.coupons[0].potentialGain }>
@@ -115,6 +122,9 @@ class container extends Component {
                   dropdownOptions={ this.handicaps } />
               ))}
             </Coupon>
+          </div>
+          <div className="span-12">
+            <Button icon={ plus } onClick={ this.addCoupon.bind(this) } />
           </div>
         </GridBlock>
       </div>
