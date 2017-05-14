@@ -20,7 +20,8 @@ input[type="checkbox"] {
 .matchData {
   display: flex;
   justify-content: center;
-  flex-basis: 100%; // Keeps other elements at their minimum required width and pushes them respectively left and right
+  flex-grow: 3;
+  min-width: 38%;
   padding: $scale-2-1 $scale;
   border-style: solid;
   border-color: $color-base-lighter-7;
@@ -28,15 +29,15 @@ input[type="checkbox"] {
 
   > * { float: left; }
 
-  > p:first-child {
-    width: 100px;
+  > *:first-child {
+    width: 40%;
     text-align: right;
     margin-right: $scale;
     @include truncate;
   }
 
-  > p:last-child {
-    width: 100px;
+  > *:last-child {
+    width: 40%;
     margin-left: $scale;
     @include truncate;
   }
@@ -53,6 +54,7 @@ select {
 .betWrap {
   display: flex;
   align-items: center;
+  flex-basis: 112px;
   padding: $scale-2-1;
   padding-top: $scale + 2px;
   padding-bottom: $scale + 2px;
