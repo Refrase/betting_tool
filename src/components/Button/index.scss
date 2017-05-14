@@ -1,0 +1,42 @@
+@import './../../styles/vars.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: $scale-1-2 $scale;
+  border-radius: 100px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: $fontSize-xsmall;
+  box-shadow: $boxShadow-button;
+  transition: box-shadow 150ms ease-out;
+
+  &:focus { outline: none; }
+  &:active { box-shadow: none;  }
+
+  &-primary {
+    background-color: $color-green;
+    background-image: $linearGradientOverlay-background-darken;
+    color: white;
+  }
+
+  &_label { margin-left: $scale-1-2; }
+
+  &_icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  &-iconOnly {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    & .button_icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -2,21 +2,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
 
-// Components
-import CouponItem from './../CouponItem'
-
 class Coupon extends Component {
   render() {
-    const { matches, handicaps, gain } = this.props
+    const { children, gain } = this.props
     return (
       <ul className="coupon">
-        { matches.map( (match, index) => (
-          <CouponItem
-            key={ index }
-            index={ index }
-            match={ match }
-            dropdownOptions={ handicaps } />
-        ))}
+        { children }
         <li className="coupon_footer"><b>{ gain } kr</b></li>
       </ul>
     )
@@ -24,8 +15,7 @@ class Coupon extends Component {
 }
 
 Coupon.propTypes = {
-  matches: PropTypes.array,
-  handicaps: PropTypes.array,
+  children: PropTypes.node,
   gain: PropTypes.number
 }
 

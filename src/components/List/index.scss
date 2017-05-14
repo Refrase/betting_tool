@@ -6,6 +6,11 @@
   box-shadow: $boxShadow;
   width: 100%;
   border-radius: $borderRadius;
-  margin-bottom: $scale-2-1;
   list-style: none;
+  max-height: calc( 100vh - 288px );
+  overflow-y: auto;
+
+  &::-webkit-scrollbar { width: 4px; }
+  &::-webkit-scrollbar-track { background: transparent; position: absolute; }
+  &::-webkit-scrollbar-thumb { background: rgba( $color-base, 0.15 ); border-radius: 10px; margin-right: 4px; }
 }

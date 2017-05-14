@@ -37,8 +37,8 @@ html, body {
   overflow-x: hidden;
 
   &::-webkit-scrollbar { width: 4px; }
-  &::-webkit-scrollbar-track { background: $color-base-lighter-7; }
-  &::-webkit-scrollbar-thumb { background: $color-base; }
+  &::-webkit-scrollbar-track { background: $color-green; }
+  &::-webkit-scrollbar-thumb { background: $color-green-darker-1; }
 }
 
 //	http://www.paulirish.com/2012/box-sizing-border-box-ftw/
