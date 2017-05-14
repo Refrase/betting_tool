@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import './index.css'
 
 // Assets
-import Checkmark from '../../assets/checkmark.svg'
+import Checkmark from './assets/checkmark.svg'
 
 class Checkbox extends Component {
   render() {
