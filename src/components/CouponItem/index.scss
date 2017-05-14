@@ -14,8 +14,7 @@
 
 input[type="checkbox"] {
   margin: $scale-2-1;
-  max-width: 10px;
-  flex-basis: 10px;
+  flex-shrink: 0;
 }
 
 .matchData {

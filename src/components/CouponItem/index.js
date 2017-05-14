@@ -12,7 +12,7 @@ class CouponItem extends Component {
         <input type="checkbox" />
         <div className="matchData">
           <p>{ teams[0] }</p>
-          <p><b>{ scores[0] } &ndash; { scores[1] }</b></p>
+          <p><b>{ scores[0] }&ndash;{ scores[1] }</b></p>
           <p>{ teams[1] }</p>
         </div>
         <select>
@@ -26,6 +26,7 @@ class CouponItem extends Component {
           <p className="bet">{ bet }</p>
           <img
             src={ better }
+            alt="Better"
             width="36" height="36"
             style={ imageStyle } />
         </div>

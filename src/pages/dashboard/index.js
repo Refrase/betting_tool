@@ -36,7 +36,7 @@ class container extends Component {
             teams: ['Liverpool', 'Chelsea'],
             scores: [2, 5],
             bet: 'X',
-            better: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAelAAAAJDJjMTMzYzJjLTFlMWQtNDI2My1iNTkxLWZkOGNmNzA4MThlYQ.jpg'
+            better: 'https://scontent-amt2-1.cdninstagram.com/t51.2885-19/11821220_723506151110256_1159502586_a.jpg'
           },
           {
             teams: ['Hull', 'Newcastle'],
