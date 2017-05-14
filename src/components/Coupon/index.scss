@@ -2,7 +2,6 @@
 
 .coupon {
   background-color: $color-smoke;
-  background-image: $linearGradientOverlay-background-darken;
   box-shadow: $boxShadow;
   border-radius: $borderRadius;
   width: 100%;
@@ -10,7 +9,6 @@
 
   &_footer {
     padding: $scale-2-1;
-    background: $color-base-lighter-7;
     text-align: right;
     border-radius: 0 0 $borderRadius $borderRadius;
   }

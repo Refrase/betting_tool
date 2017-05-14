@@ -7,9 +7,14 @@
   align-items: center;
   width: 100%;
   border-bottom: 1px solid $color-base-lighter-7;
+  transition: all 200ms ease-out;
 
   &:first-child { border-radius: $borderRadius $borderRadius 0 0; }
-  &:last-child { border: none; }
+
+  &-checked {
+    background-color: $color-green-lighter-5;
+    border-color: $color-green-lighter-3;
+  }
 }
 
 .matchData {
@@ -18,9 +23,6 @@
   flex-grow: 3;
   min-width: 38%;
   padding: $scale-2-1 $scale;
-  border-style: solid;
-  border-color: $color-base-lighter-7;
-  border-width: 0 1px 0 1px;
 
   > * { float: left; }
 
@@ -53,7 +55,6 @@ select {
   padding: $scale-2-1;
   padding-top: $scale + 2px;
   padding-bottom: $scale + 2px;
-  border-left: 1px solid $color-base-lighter-7;
 }
 
 .bet {

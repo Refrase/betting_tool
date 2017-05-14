@@ -9,7 +9,7 @@ class ListItem extends Component {
       <li className="listItem">
         <p>
           { system ? ( <span className="listItem_system">{system.minRights}/{system.total}</span> ) : null }
-          <span className="listItem_amount">{amountPerBet * system.total} kr</span>
+          <span className="listItem_amount">&mdash;&nbsp; {amountPerBet * system.total} kr</span>
         </p>
         <div>
           <p className="listItem_date">{date}. {month}</p>

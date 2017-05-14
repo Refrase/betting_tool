@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import './index.css'
 
+// Utils
 import classnames from 'classnames'
 
 class GridBlock extends Component {
