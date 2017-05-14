@@ -12,11 +12,6 @@
   &:last-child { border: none; }
 }
 
-input[type="checkbox"] {
-  margin: $scale-2-1;
-  flex-shrink: 0;
-}
-
 .matchData {
   display: flex;
   justify-content: center;

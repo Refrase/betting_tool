@@ -13,6 +13,7 @@ class Coupon extends Component {
         { matches.map( (match, index) => (
           <CouponItem
             key={ index }
+            index={ index }
             match={ match }
             dropdownOptions={ handicaps } />
         ))}

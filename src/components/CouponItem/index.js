@@ -2,14 +2,17 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './index.css'
 
+// Components
+import Checkbox from './../Checkbox'
+
 class CouponItem extends Component {
   render() {
-    const { match, dropdownOptions } = this.props
+    const { match, dropdownOptions, index } = this.props
     const { teams, scores, bet, better } = match
     const imageStyle = { borderRadius: '50%' }
     return (
       <li className="couponItem">
-        <input type="checkbox" />
+        <Checkbox id={ 'checkbox' + index } />
         <div className="matchData">
           <p>{ teams[0] }</p>
           <p><b>{ scores[0] }&ndash;{ scores[1] }</b></p>
@@ -36,6 +39,7 @@ class CouponItem extends Component {
 }
 
 CouponItem.propTypes = {
+  index: PropTypes.number.isRequired,
   match: PropTypes.object,
   dropdownOptions: PropTypes.array,
 }
