@@ -38,21 +38,21 @@ class container extends Component {
         matches: [
           {
             teams: ['Southampton', 'West Ham'],
-            scores: [3, 1],
+            scores: [],
             bet: '1',
             handicap: '1-0',
             better: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAelAAAAJDJjMTMzYzJjLTFlMWQtNDI2My1iNTkxLWZkOGNmNzA4MThlYQ.jpg'
           },
           {
             teams: ['Liverpool', 'Chelsea'],
-            scores: [2, 5],
+            scores: [],
             bet: 'X',
             handicap: '0-2',
             better: 'https://scontent-amt2-1.cdninstagram.com/t51.2885-19/11821220_723506151110256_1159502586_a.jpg'
           },
           {
             teams: ['Hull', 'Newcastle'],
-            scores: [2, 2],
+            scores: [],
             bet: '2',
             handicap: 'No handicap',
             better: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAelAAAAJDJjMTMzYzJjLTFlMWQtNDI2My1iNTkxLWZkOGNmNzA4MThlYQ.jpg'

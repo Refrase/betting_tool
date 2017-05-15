@@ -30,7 +30,10 @@ class CouponItem extends Component {
         <Checkbox id={ 'checkbox' + index } onChange={ this.markCouponItemAsChecked.bind(this) } />
         <div className="matchData">
           <p>{ teams[0] }</p>
-          <p><b>{ scores[0] }&ndash;{ scores[1] }</b></p>
+          {
+            scores[0] && scores[1] ? ( <p><b>{ scores[0] ? scores[0] : '' } &ndash; { scores[1] ? scores[1] : '' }</b></p> )
+            : ( <p>&ndash;</p> )
+          }
           <p>{ teams[1] }</p>
         </div>
         <p className="couponItem_handicap">{ handicap !== 'No handicap' ? handicap : '' }</p>
