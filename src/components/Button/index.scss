@@ -6,6 +6,8 @@
   cursor: pointer;
   padding: $scale-1-2 $scale;
   border-radius: 100px;
+  background-image: $linearGradientOverlay-background-darken;
+  color: white;
   border: none;
   text-transform: uppercase;
   font-weight: 900;
@@ -16,13 +18,11 @@
   &:focus { outline: none; }
   &:active { box-shadow: none;  }
 
-  &-primary {
-    background-color: $color-green;
-    background-image: $linearGradientOverlay-background-darken;
-    color: white;
-  }
+  &-primary { background-color: $color-green; }
+  &-secondary { background-color: $color-blue; }
 
   &_label { margin-left: $scale-1-2; }
+  &-labelOnly { .button_label { margin-left: 0; }}
 
   &_icon {
     width: 14px;
@@ -34,7 +34,7 @@
     height: 48px;
     border-radius: 50%;
 
-    & .button_icon {
+    .button_icon {
       width: 24px;
       height: 24px;
     }

@@ -45,7 +45,7 @@ class CouponItem extends Component {
           <img
             src={ better }
             alt="Better"
-            width="36" height="36"
+            width="28" height="28"
             style={ imageStyle } />
         </div>
       </li>

@@ -1,10 +1,11 @@
 @import './../../styles/vars.scss';
 
 .formAddCoupon {
-  background-color: $color-yellow;
+  background-color: $color-blue;
   background-image: $linearGradientOverlay-background-lighten;
   box-shadow: $boxShadow;
-  padding: $scale;
+  padding: $scale-2-1;
+  padding-bottom: $scale-4-1;
   width: 100%;
   border-radius: $borderRadius;
   max-height: calc( 100vh - 288px );

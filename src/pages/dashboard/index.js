@@ -79,17 +79,18 @@ class container extends Component {
       },
     ]
 
-    this.state = { addingCoupon: false }
+    this.state = { addingCoupon: true } // CHANGE BACK TO FALSE!
   }
 
   addCoupon() { this.setState({ addingCoupon: !this.state.addingCoupon }) }
 
   render() {
-    const flipAreaPerspective = { perspective: 1200, marginBottom: '24px' }
+    const styleflipArea = { perspective: 1200, marginBottom: '24px' }
+    const styleButton = { position: 'fixed', left: 'calc(50% - 24px)', bottom: '24px', zIndex: '1001' }
     return (
       <div className="dashboard">
         <GridBlock columns={12}>
-          <div className="span-5" style={ flipAreaPerspective }>
+          <div className="span-5" style={ styleflipArea }>
             <Flipper
               flip={ this.state.addingCoupon ? true : null }
               front={
@@ -105,15 +106,7 @@ class container extends Component {
                   )}
                 </List>
               }
-              back={
-                <FormAddCoupon>
-                  <p>Form</p>
-                  <p>Form</p>
-                  <p>Form</p>
-                  <p>Form</p>
-                  <p>Form</p>
-                </FormAddCoupon>
-              } />
+              back={ <FormAddCoupon /> } />
           </div>
           <div className="span-7">
             <Coupon gain={ this.coupons[0].potentialGain }>
@@ -127,7 +120,7 @@ class container extends Component {
             </Coupon>
           </div>
           <div className="span-12">
-            <Button icon={ plus } onClick={ this.addCoupon.bind(this) } />
+            <Button icon={ plus } type="secondary" onClick={ this.addCoupon.bind(this) } style={ styleButton } />
           </div>
         </GridBlock>
       </div>

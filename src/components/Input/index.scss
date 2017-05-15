@@ -1,0 +1,28 @@
+@import './../../styles/vars.scss';
+
+.input {
+  position: relative;
+  margin-bottom: $scale-2-1;
+
+  &-focused,
+  &-hasValue {
+    label { transform: scale(0.7) translate3d(0, 48px, 0) !important; }
+  }
+
+  label {
+    position: absolute;
+    color: $color-blue-darker-4 !important;
+    color: $color-blue-darker-4;
+    transform: translate3d(0, 8px, 0);
+    transform-origin: left;
+    transition: transform 150ms ease-out;
+  }
+
+  input {
+    color: white;
+    padding: $scale-1-2 0;
+    background-color: transparent;
+    border-bottom: 2px solid $color-blue-darker-4;
+    &:focus { outline: none; }
+  }
+}

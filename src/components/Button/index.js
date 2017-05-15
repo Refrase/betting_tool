@@ -8,8 +8,10 @@ class Button extends Component {
 
     const classes = classnames( 'button', {
       'button-primary': this.props.type === 'primary' ? true : null,
-      'button-iconOnly': !this.props.label ? true : null
-    });
+      'button-secondary': this.props.type === 'secondary' ? true : null,
+      'button-iconOnly': !this.props.label ? true : null,
+      'button-labelOnly': !this.props.icon ? true : null
+    })
 
     return (
       <button className={ classes } onClick={ this.props.onClick } style={ this.props.style }>

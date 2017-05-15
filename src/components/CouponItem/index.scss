@@ -12,50 +12,50 @@
   &:first-child { border-radius: $borderRadius $borderRadius 0 0; }
 
   &-checked { background-color: $color-green-lighter-5 !important; }
-}
 
-.matchData {
-  display: flex;
-  justify-content: center;
-  flex-grow: 3;
-  min-width: 38%;
-  padding: $scale-2-1 $scale;
+  .matchData {
+    display: flex;
+    justify-content: center;
+    flex-grow: 3;
+    min-width: 38%;
+    padding: $scale-2-1 $scale;
 
-  > * { float: left; }
+    > * { float: left; }
 
-  > *:first-child {
-    width: 40%;
-    text-align: right;
+    > *:first-child {
+      width: 40%;
+      text-align: right;
+      margin-right: $scale;
+      @include truncate;
+    }
+
+    > *:last-child {
+      width: 40%;
+      margin-left: $scale;
+      @include truncate;
+    }
+  }
+
+  select {
+    color: $color-base-lighter-4;
+    background: rgba(255,255,255,0);
+    font-weight: 200;
+    margin: 0 $scale-2-1 !important;
+    &:focus { border: 0; outline: 0; }
+  }
+
+  .betWrap {
+    display: flex;
+    align-items: center;
+    flex-basis: 102px;
+    padding: $scale-2-1;
+    padding-top: $scale + 2px;
+    padding-bottom: $scale + 2px;
+  }
+
+  .bet {
     margin-right: $scale;
-    @include truncate;
+    font-weight: bold;
+    font-size: $fontSize-xxlarge;
   }
-
-  > *:last-child {
-    width: 40%;
-    margin-left: $scale;
-    @include truncate;
-  }
-}
-
-select {
-  color: $color-base-lighter-4;
-  background: rgba(255,255,255,0);
-  font-weight: 200;
-  margin: 0 $scale-2-1 !important;
-  &:focus { border: 0; outline: 0; }
-}
-
-.betWrap {
-  display: flex;
-  align-items: center;
-  flex-basis: 112px;
-  padding: $scale-2-1;
-  padding-top: $scale + 2px;
-  padding-bottom: $scale + 2px;
-}
-
-.bet {
-  margin-right: $scale;
-  font-weight: bold;
-  font-size: $fontSize-xxlarge;
 }
