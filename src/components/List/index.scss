@@ -9,12 +9,8 @@
   list-style: none;
   max-height: calc( 100vh - 288px );
   overflow-y: auto;
-  transition: transform 600ms ease-out;
-  backface-visibility: hidden;
 
   &::-webkit-scrollbar { width: 4px; }
   &::-webkit-scrollbar-track { background: transparent; position: absolute; }
   &::-webkit-scrollbar-thumb { background: rgba( $color-base, 0.15 ); border-radius: 10px; margin-right: 4px; }
-
-  &-flipped { transform: rotateY( 180deg ); }
 }

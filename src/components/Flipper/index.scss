@@ -1,0 +1,14 @@
+@import './../../styles/vars.scss';
+
+.flipper {
+  position: relative;
+  transition: transform 600ms ease-out;
+	transform-style: preserve-3d;
+  &-flipped { transform: rotateY( 180deg ); }}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden; }
+.front { transform: rotateY( 0deg ); }
+.back { transform: rotateY( -180deg );  }

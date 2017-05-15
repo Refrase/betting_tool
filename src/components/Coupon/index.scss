@@ -8,6 +8,7 @@
   list-style: none;
 
   &_footer {
+    border-top: 6px solid $color-base-lighter-8;
     padding: $scale-2-1;
     text-align: right;
     border-radius: 0 0 $borderRadius $borderRadius;

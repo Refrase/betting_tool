@@ -1,8 +1,7 @@
 @import './../../styles/vars.scss';
 
 .formAddCoupon {
-  position: absolute;
-  background-color: $color-yellow-darker-2; // To add effect of darker background until 100% flipped
+  background-color: $color-yellow;
   background-image: $linearGradientOverlay-background-lighten;
   box-shadow: $boxShadow;
   padding: $scale;
@@ -10,16 +9,8 @@
   border-radius: $borderRadius;
   max-height: calc( 100vh - 288px );
   overflow-y: auto;
-  transform: rotateY( -180deg );
-  transition: transform 600ms ease-out, background-color 400ms 200ms ease-out;
-  backface-visibility: hidden;
 
   &::-webkit-scrollbar { width: 4px; }
   &::-webkit-scrollbar-track { background: transparent; position: absolute; }
   &::-webkit-scrollbar-thumb { background: rgba( $color-base, 0.15 ); border-radius: 10px; margin-right: 4px; }
-
-  &-flipped {
-    background-color: $color-yellow;
-    transform: rotateY( 0deg );
-  }
 }

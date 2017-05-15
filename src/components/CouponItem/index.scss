@@ -6,15 +6,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid $color-base-lighter-7;
   transition: all 200ms ease-out;
 
+  &:nth-child(even) { background-color: $color-base-lighter-8; }
   &:first-child { border-radius: $borderRadius $borderRadius 0 0; }
 
-  &-checked {
-    background-color: $color-green-lighter-5;
-    border-color: $color-green-lighter-3;
-  }
+  &-checked { background-color: $color-green-lighter-5 !important; }
 }
 
 .matchData {

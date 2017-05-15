@@ -6,7 +6,7 @@
   align-items: flex-end;
   padding: $scale;
 
-  &:nth-child(even) { background-color: mix($color-yellow, rgba(black, 0.1)); }
+  &:nth-child(even) { background-color: mix($color-yellow, rgba(black, 0.07)); }
   &:first-child { border-radius: $borderRadius $borderRadius 0 0; }
   &:last-child { border-radius: 0 0 $borderRadius $borderRadius; }
 

@@ -3,6 +3,7 @@ import './index.css'
 
 // Components
 import GridBlock from './../../components/GridBlock'
+import Flipper from './../../components/Flipper'
 import List from './../../components/List'
 import ListItem from './../../components/ListItem'
 import FormAddCoupon from './../../components/FormAddCoupon'
@@ -78,14 +79,10 @@ class container extends Component {
       },
     ]
 
-    this.state = {
-      addingCoupon: false
-    }
+    this.state = { addingCoupon: false }
   }
 
-  addCoupon() {
-    this.setState({ addingCoupon: !this.state.addingCoupon })
-  }
+  addCoupon() { this.setState({ addingCoupon: !this.state.addingCoupon }) }
 
   render() {
     const flipAreaPerspective = { perspective: 1200, marginBottom: '24px' }
@@ -93,24 +90,30 @@ class container extends Component {
       <div className="dashboard">
         <GridBlock columns={12}>
           <div className="span-5" style={ flipAreaPerspective }>
-            <FormAddCoupon flip={ this.state.addingCoupon ? true : null }>
-              <p>Form</p>
-              <p>Form</p>
-              <p>Form</p>
-              <p>Form</p>
-              <p>Form</p>
-            </FormAddCoupon>
-            <List flip={ this.state.addingCoupon ? true : null }>
-              { this.coupons.map( (coupon, index) =>
-                <ListItem
-                  key={ index }
-                  date={ coupon.date }
-                  month={ coupon.month }
-                  person={ coupon.person }
-                  system={ coupon.system }
-                  amountPerBet={ coupon.amountPerBet } />
-              )}
-            </List>
+            <Flipper
+              flip={ this.state.addingCoupon ? true : null }
+              front={
+                <List>
+                  { this.coupons.map( (coupon, index) =>
+                    <ListItem
+                      key={ index }
+                      date={ coupon.date }
+                      month={ coupon.month }
+                      person={ coupon.person }
+                      system={ coupon.system }
+                      amountPerBet={ coupon.amountPerBet } />
+                  )}
+                </List>
+              }
+              back={
+                <FormAddCoupon>
+                  <p>Form</p>
+                  <p>Form</p>
+                  <p>Form</p>
+                  <p>Form</p>
+                  <p>Form</p>
+                </FormAddCoupon>
+              } />
           </div>
           <div className="span-7">
             <Coupon gain={ this.coupons[0].potentialGain }>
