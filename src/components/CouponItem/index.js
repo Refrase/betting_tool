@@ -18,8 +18,8 @@ class CouponItem extends Component {
   }
 
   render() {
-    const { match, dropdownOptions, index } = this.props
-    const { teams, scores, bet, better } = match
+    const { match, index } = this.props
+    const { teams, scores, bet, handicap, better } = match
 
     const imageStyle = { borderRadius: '50%' }
 
@@ -33,13 +33,7 @@ class CouponItem extends Component {
           <p><b>{ scores[0] }&ndash;{ scores[1] }</b></p>
           <p>{ teams[1] }</p>
         </div>
-        <select>
-          { dropdownOptions.map( ( option, index ) => (
-            <option key={ index } value={ option }>
-              { option }
-            </option>
-          ))}
-        </select>
+        <p className="couponItem_handicap">{ handicap !== 'No handicap' ? handicap : '' }</p>
         <div className="betWrap">
           <p className="bet">{ bet }</p>
           <img
@@ -55,8 +49,7 @@ class CouponItem extends Component {
 
 CouponItem.propTypes = {
   index: PropTypes.number.isRequired,
-  match: PropTypes.object,
-  dropdownOptions: PropTypes.array,
+  match: PropTypes.object
 }
 
 export default CouponItem

@@ -14,4 +14,26 @@
   &::-webkit-scrollbar { width: 4px; }
   &::-webkit-scrollbar-track { background: transparent; position: absolute; }
   &::-webkit-scrollbar-thumb { background: rgba( $color-base, 0.15 ); border-radius: 10px; margin-right: 4px; }
+
+  .input,
+  input[type="radio"],
+  select,
+  &_labelRadios {
+    font-size: $fontSize-base;
+    color: white;
+    display: inline-block;
+    margin-right: $scale;
+    margin-bottom: $scale-2-1;
+  }
+
+  &_labelRadios { color: $color-blue-darker-4; }
+
+  select {
+    background: none;
+    padding-bottom: $scale-1-2;
+    border-bottom: 1px solid $color-blue-darker-4;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+  }
+  select:focus { outline: none; }
 }

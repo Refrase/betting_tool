@@ -6,7 +6,7 @@
 
   &-focused,
   &-hasValue {
-    label { transform: scale(0.7) translate3d(0, 48px, 0) !important; }
+    label { transform: scale(0.5) translate3d(0, 58px, 0) !important; }
   }
 
   label {
@@ -15,14 +15,14 @@
     color: $color-blue-darker-4;
     transform: translate3d(0, 8px, 0);
     transform-origin: left;
-    transition: transform 150ms ease-out;
+    transition: transform 100ms ease-out;
   }
 
   input {
     color: white;
     padding: $scale-1-2 0;
     background-color: transparent;
-    border-bottom: 2px solid $color-blue-darker-4;
+    border-bottom: 1px solid $color-blue-darker-4;
     &:focus { outline: none; }
   }
 }

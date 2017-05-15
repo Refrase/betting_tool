@@ -4,7 +4,8 @@
   position: relative;
   transition: transform 600ms ease-out;
 	transform-style: preserve-3d;
-  &-flipped { transform: rotateY( 180deg ); }}
+  &-flipped { transform: rotateY( 180deg ); }
+}
 
 .front, .back {
   position: absolute;

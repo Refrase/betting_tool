@@ -25,7 +25,7 @@ class Input extends Component {
       'input-hasValue': this.state.hasValue ? true : null
     });
     return (
-      <div className={ classes }>
+      <div className={ classes } style={ this.props.style }>
         <label htmlFor={ this.props.id }>{ this.props.label }</label>
         <input
           type={ this.props.type }
@@ -42,7 +42,8 @@ Input.propTypes = {
   label: PropTypes.string,
   id: PropTypes.string.isRequired,
   type: PropTypes.string,
-  onClick: PropTypes.bool
+  onClick: PropTypes.bool,
+  style: PropTypes.object
  }
 
 Input.defaultProps = { type: 'text' }
