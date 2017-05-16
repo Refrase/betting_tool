@@ -22,16 +22,22 @@
     font-size: $fontSize-base;
     color: white;
     display: inline-block;
-    margin-right: $scale;
+    margin-right: $scale-2-1;
     margin-bottom: $scale-2-1;
   }
 
-  &_labelRadios { color: $color-blue-darker-4; }
+  .input { width: 150px; }
+
+  &_labelRadios {
+    color: $color-blue-darker-4;
+    margin-right: $scale;
+  }
 
   select {
-    background: none;
-    padding-bottom: $scale-1-2;
-    border-bottom: 1px solid $color-blue-darker-4;
+    background-color: $color-blue-darker-1;
+    padding: $scale-1-2 $scale;
+    border-radius: 2px !important;
+    // border-bottom: 1px solid $color-blue-darker-4;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
   }

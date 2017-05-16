@@ -3,6 +3,7 @@
 .input {
   position: relative;
   margin-bottom: $scale-2-1;
+  width: 150px;
 
   &-focused,
   &-hasValue {
@@ -10,19 +11,20 @@
   }
 
   label {
+    margin-left: $scale;
     position: absolute;
-    color: $color-blue-darker-4 !important;
-    color: $color-blue-darker-4;
-    transform: translate3d(0, 8px, 0);
+    color: $color-blue-darker-5;
+    transform: translate3d(0, 7px, 0);
     transform-origin: left;
     transition: transform 100ms ease-out;
   }
 
   input {
+    background-color: $color-blue-darker-1;
     color: white;
-    padding: $scale-1-2 0;
-    background-color: transparent;
-    border-bottom: 1px solid $color-blue-darker-4;
+    padding: $scale-1-2 $scale;
+    border-radius: 2px;
+    width: 100%;
     &:focus { outline: none; }
   }
 }

@@ -18,17 +18,21 @@
       transition: background 100ms ease-in;
       transform: scale(1);
     }
+
+    &:checked ~ label { color: white; }
   }
 
   label {
     position: absolute;
-    padding-top: 20px + $scale-1-2;
+    color: $color-blue-darker-4;
+    padding: 6px 0;
     min-width: 20px;
     text-align: center;
-    font-size: $fontSize-xsmall;
-    font-weight: 600;
+    font-size: $fontSize-xxxsmall;
+    font-weight: 900;
     z-index: 1;
     cursor: pointer;
+    transition: color 100ms ease-in;
   }
 
   .check {

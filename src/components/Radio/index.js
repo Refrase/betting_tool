@@ -12,7 +12,7 @@ class Radio extends Component {
         <input type="radio" name={ this.props.name } id={ this.props.id } onChange={ this.props.onChange } />
         <label htmlFor={ this.props.id }>{ this.props.label }</label>
         <div className="check">
-          <img src={ Checkmark } alt="Checkmark" width="100%" />
+          { /* <img src={ Checkmark } alt="Checkmark" width="100%" /> */ }
         </div>
       </div>
     )
